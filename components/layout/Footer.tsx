@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-[#1E2A3B] bg-[#0B1220]/90 backdrop-blur-md">
+    <footer className="mt-0 border-t border-[#1E2A3B] bg-[#0B1220]/90 backdrop-blur-md">
 
       <div className="max-w-6xl mx-auto px-5 sm:px-6 py-14 md:py-16">
 

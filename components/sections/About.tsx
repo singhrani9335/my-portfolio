@@ -54,7 +54,7 @@ export default function About() {
 
               {/* IMAGE */}
               <img
-                src="/profile.jpg"
+                src="/profile.png"
                 alt="Rani Singh"
                 className="
                   relative z-10

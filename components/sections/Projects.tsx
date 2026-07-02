@@ -1,38 +1,12 @@
 import FadeUp from "@/components/ui/FadeUp";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import ProjectPlaceholder from "@/components/ui/ProjectPlaceholder";
 
-const projects = [
-  {
-    id: 1,
-    title: "Admin Dashboard",
-    description:
-      "Modern admin dashboard with authentication, analytics charts and responsive UI.",
-    image: "/projects/dashboard.png",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/singhrani9335",
-    demo: "https://vercel.com",
-  },
-  {
-    id: 2,
-    title: "Portfolio Website",
-    description:
-      "Professional portfolio website built with modern UI, animations and clean design system.",
-    image: "/projects/portfolio.png",
-    tech: ["Next.js", "React", "Tailwind CSS"],
-    github: "https://github.com/singhrani9335",
-    demo: "https://vercel.com",
-  },
-  {
-    id: 3,
-    title: "E-Commerce UI",
-    description:
-      "High-quality e-commerce frontend with smooth UX and responsive design.",
-    image: "/projects/ecommerce.png",
-    tech: ["React", "Tailwind CSS"],
-    github: "https://github.com/singhrani9335",
-    demo: "https://vercel.com",
-  },
-];
+import { projects } from "@/data/projects";
+
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 
 export default function Projects() {
   return (
@@ -51,7 +25,8 @@ export default function Projects() {
           </h2>
 
           <p className="mt-4 md:mt-5 text-gray-400 max-w-2xl mx-auto leading-6 md:leading-7 text-sm sm:text-base md:text-lg">
-            Real-world projects built with modern technologies and clean UI focus.
+            Real-world projects built with modern technologies and clean UI
+            focus.
           </p>
 
         </div>
@@ -76,24 +51,33 @@ export default function Projects() {
                 hover:border-[#22D3EE]/40
                 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)]
 
-                transition-all duration-500
+                transition-all
+                duration-500
               "
             >
 
-              {/* IMAGE */}
+              {/* IMAGE / PLACEHOLDER */}
               <div className="relative h-[180px] sm:h-[200px] md:h-[212px] overflow-hidden">
 
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="
-                    w-full h-full object-cover
-                    group-hover:scale-110
-                    transition duration-700
-                  "
-                />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="
+                      w-full
+                      h-full
+                      object-cover
+                      group-hover:scale-110
+                      transition
+                      duration-700
+                    "
+                  />
+                ) : (
+                  <ProjectPlaceholder />
+                )}
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition" />
+
               </div>
 
               {/* CONTENT */}
@@ -107,16 +91,21 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                {/* TECH */}
+                {/* TECH STACK */}
                 <div className="flex flex-wrap gap-2 mt-3 sm:mt-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
                       className="
-                        px-2 sm:px-3 py-1 text-[10px] sm:text-xs
+                        px-2
+                        sm:px-3
+                        py-1
+                        text-[10px]
+                        sm:text-xs
                         rounded-full
                         bg-[#0F1B2D]
-                        border border-[#1E2A3B]
+                        border
+                        border-[#1E2A3B]
                         text-gray-300
                       "
                     >
@@ -130,14 +119,27 @@ export default function Projects() {
 
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
-                      flex-1 flex items-center justify-center gap-2
-                      px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl
-                      border border-[#1E2A3B]
+                      flex-1
+                      flex
+                      items-center
+                      justify-center
+                      gap-2
+                      px-3
+                      sm:px-4
+                      py-2
+                      sm:py-2.5
+                      rounded-xl
+                      border
+                      border-[#1E2A3B]
                       text-gray-300
                       hover:border-[#22D3EE]
                       hover:text-[#22D3EE]
-                      transition text-xs sm:text-sm
+                      transition
+                      text-xs
+                      sm:text-sm
                     "
                   >
                     <FaGithub />
@@ -146,14 +148,26 @@ export default function Projects() {
 
                   <a
                     href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
-                      flex-1 flex items-center justify-center gap-2
-                      px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl
+                      flex-1
+                      flex
+                      items-center
+                      justify-center
+                      gap-2
+                      px-3
+                      sm:px-4
+                      py-2
+                      sm:py-2.5
+                      rounded-xl
                       bg-[#22D3EE]
                       text-[#0B1220]
                       font-semibold
                       hover:opacity-90
-                      transition text-xs sm:text-sm
+                      transition
+                      text-xs
+                      sm:text-sm
                     "
                   >
                     <FaExternalLinkAlt />

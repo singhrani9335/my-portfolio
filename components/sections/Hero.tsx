@@ -8,21 +8,18 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex items-start pt-20 bg-white dark:bg-slate-950 overflow-hidden"
+      className="relative w-full min-h-screen flex items-start pt-8 bg-white dark:bg-slate-950 overflow-hidden"
     >
       <FadeUp>
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10">
-
           {/* BACKGROUNDS */}
           <div className="absolute top-0 left-0 w-[250px] sm:w-[350px] lg:w-[500px] h-[250px] sm:h-[350px] lg:h-[500px] bg-gradient-to-br from-[#0B1220] via-[#0F1B2D] to-transparent blur-3xl rounded-full" />
           <div className="absolute bottom-0 right-0 w-[250px] sm:w-[350px] lg:w-[500px] h-[250px] sm:h-[350px] lg:h-[500px] bg-gradient-to-tr from-[#0B1220] via-[#0F1B2D] to-transparent blur-3xl rounded-full" />
 
           {/* GRID */}
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center min-h-screen">
-
+         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center min-h-[80vh]">
             {/* LEFT */}
             <div className="relative z-10 flex flex-col justify-center lg:pr-10 text-center lg:text-left">
-
               {/* BADGE */}
               <span
                 className="w-fit mx-auto lg:mx-0 flex items-center gap-2 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm 
@@ -69,24 +66,29 @@ export default function Hero() {
               {/* STATS */}
               <div className="flex justify-center lg:justify-start gap-6 sm:gap-8 mt-8 flex-wrap">
                 <div>
-                  <p className="text-2xl sm:text-3xl font-bold text-white">15+</p>
+                  <p className="text-2xl sm:text-3xl font-bold text-white">
+                    15+
+                  </p>
                   <p className="text-xs sm:text-sm text-gray-400">Projects</p>
                 </div>
 
                 <div>
-                  <p className="text-2xl sm:text-3xl font-bold text-white">8+</p>
+                  <p className="text-2xl sm:text-3xl font-bold text-white">
+                    8+
+                  </p>
                   <p className="text-xs sm:text-sm text-gray-400">Clients</p>
                 </div>
 
                 <div>
-                  <p className="text-2xl sm:text-3xl font-bold text-white">1+</p>
+                  <p className="text-2xl sm:text-3xl font-bold text-white">
+                    1+
+                  </p>
                   <p className="text-xs sm:text-sm text-gray-400">Year</p>
                 </div>
               </div>
 
               {/* CTA */}
               <div className="mt-10 space-y-4">
-
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="/resume.pdf"
@@ -118,45 +120,43 @@ export default function Hero() {
                     View Projects
                   </a>
                 </div>
-
               </div>
             </div>
 
             {/* RIGHT */}
-<div className="relative flex items-center justify-end overflow-visible group mt-10 lg:mt-0 lg:pr-2">
+            <div className="relative flex items-center justify-end overflow-visible group mt-10 lg:mt-0 lg:pr-2">
+              {/* GLOW */}
+              <div className="absolute right-0 lg:right-[-140px] w-[250px] sm:w-[350px] lg:w-[420px] h-[250px] sm:h-[350px] lg:h-[420px] bg-[#22D3EE]/10 blur-3xl rounded-full" />
 
-  {/* GLOW */}
-  <div className="absolute right-0 lg:right-[-140px] w-[250px] sm:w-[350px] lg:w-[420px] h-[250px] sm:h-[350px] lg:h-[420px] bg-[#22D3EE]/10 blur-3xl rounded-full" />
+              <div className="relative ml-auto lg:translate-x-14">
+                {/* FLOATING TEXT */}
+                <div className="hidden sm:block absolute -left-10 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 z-30">
+                  <div className="relative z-30 bg-[#0F1B2D] border border-[#22D3EE]/30 px-4 py-2 rounded-xl shadow-lg whitespace-nowrap">
+                    <span className="text-[#22D3EE] font-semibold">
+                      <TypeAnimation
+                        sequence={[
+                          "Frontend Developer",
+                          1500,
+                          "React & Next.js Developer",
+                          1500,
+                          "UI/UX Engineer",
+                          1500,
+                          "Problem Solver",
+                          1500,
+                        ]}
+                        speed={50}
+                        repeat={Infinity}
+                      />
+                    </span>
+                  </div>
+                </div>
 
-  <div className="relative ml-auto lg:translate-x-14">
-
-    {/* FLOATING TEXT */}
-    <div className="hidden sm:block absolute -left-10 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition duration-500">
-      <div className="bg-[#0F1B2D] border border-[#22D3EE]/30 px-4 py-2 rounded-xl shadow-lg whitespace-nowrap">
-        <span className="text-[#22D3EE] font-semibold">
-          <TypeAnimation
-            sequence={[
-              "Frontend Developer",
-              1500,
-              "React & Next.js Developer",
-              1500,
-              "UI/UX Engineer",
-              1500,
-              "Problem Solver",
-              1500,
-            ]}
-            speed={50}
-            repeat={Infinity}
-          />
-        </span>
-      </div>
-    </div>
-
-    {/* IMAGE */}
-    <img
-      src="/profile.jpg"
-      alt="Rani Singh"
-      className="
+                {/* IMAGE */}
+                <img
+                  src="/profile.png"
+                  alt="Rani Singh"
+                  className="
+        relative z-10
         w-[220px] h-[220px]
         sm:w-[300px] sm:h-[300px]
         md:w-[520px] md:h-[520px]
@@ -167,11 +167,9 @@ export default function Hero() {
         transition duration-500
         hover:scale-105
       "
-    />
-
-  </div>
-</div>
-
+                />
+              </div>
+            </div>
           </div>
         </div>
       </FadeUp>
