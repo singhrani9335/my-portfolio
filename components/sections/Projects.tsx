@@ -1,16 +1,12 @@
 import FadeUp from "@/components/ui/FadeUp";
 import ProjectPlaceholder from "@/components/ui/ProjectPlaceholder";
-
 import { projects } from "@/data/projects";
-
-import {
-  FaGithub,
-  FaExternalLinkAlt,
-} from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Projects() {
   return (
     <section id="projects" className="container py-20 md:py-24">
+
       <FadeUp>
 
         {/* HEADER */}
@@ -25,8 +21,7 @@ export default function Projects() {
           </h2>
 
           <p className="mt-4 md:mt-5 text-gray-400 max-w-2xl mx-auto leading-6 md:leading-7 text-sm sm:text-base md:text-lg">
-            Real-world projects built with modern technologies and clean UI
-            focus.
+            Real-world projects built with modern technologies and clean UI focus.
           </p>
 
         </div>
@@ -97,15 +92,12 @@ export default function Projects() {
                     <span
                       key={tech}
                       className="
-                        px-2
-                        sm:px-3
+                        px-2 sm:px-3
                         py-1
-                        text-[10px]
-                        sm:text-xs
+                        text-[10px] sm:text-xs
                         rounded-full
                         bg-[#0F1B2D]
-                        border
-                        border-[#1E2A3B]
+                        border border-[#1E2A3B]
                         text-gray-300
                       "
                     >
@@ -127,19 +119,15 @@ export default function Projects() {
                       items-center
                       justify-center
                       gap-2
-                      px-3
-                      sm:px-4
-                      py-2
-                      sm:py-2.5
+                      px-3 sm:px-4
+                      py-2 sm:py-2.5
                       rounded-xl
-                      border
-                      border-[#1E2A3B]
+                      border border-[#1E2A3B]
                       text-gray-300
                       hover:border-[#22D3EE]
                       hover:text-[#22D3EE]
                       transition
-                      text-xs
-                      sm:text-sm
+                      text-xs sm:text-sm
                     "
                   >
                     <FaGithub />
@@ -156,18 +144,15 @@ export default function Projects() {
                       items-center
                       justify-center
                       gap-2
-                      px-3
-                      sm:px-4
-                      py-2
-                      sm:py-2.5
+                      px-3 sm:px-4
+                      py-2 sm:py-2.5
                       rounded-xl
                       bg-[#22D3EE]
                       text-[#0B1220]
                       font-semibold
                       hover:opacity-90
                       transition
-                      text-xs
-                      sm:text-sm
+                      text-xs sm:text-sm
                     "
                   >
                     <FaExternalLinkAlt />
@@ -184,6 +169,7 @@ export default function Projects() {
         </div>
 
       </FadeUp>
+
     </section>
   );
 }
